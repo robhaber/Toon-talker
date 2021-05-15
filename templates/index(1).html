@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Toon-Talker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Toon-Talker</h1>
+      <figure>
+      </figure>
+    </header>
+
+    <main>
+      <form action="/generate" method = "POST" enctype = "multipart/form-data">
+        <label id="upload_label">Upload your image here (face the camera for best results)</label>
+        <img id="up_img" src="{{ url_for('static', filename='media/img/white.jpg') }}" alt="Logo">
+        <input type="file" id="file" name="file" onchange="loadFile(event)" />
+        <label id="img_label" for="file">Select Image</label>
+        <label id="text_label">Enter the text you wish to narrate</label>
+        <textarea id="text" name="text" id="text"></textarea>
+        <label id="gender_label">Select your gender</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="submit">
+      </form>  
+    </main>
+
+    <script>
+      var loadFile = function(event) {
+        var image = document.getElementById('up_img');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+      </script>
+                
+  </body>
+</html>

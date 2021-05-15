@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Toon-Talker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Toon-Talker</h1>
+      <figure>
+      </figure>
+    </header>
+
+    <main>
+      <h2 id="result_header">Here's the final result...</h2>
+      <video id="result" controls>
+        <source src="{{ url_for('static', filename='output/video.mp4') }}" type="video/webm">
+        Your browser does not support the video tag.
+      </video>        
+    </main>
+                
+  </body>
+</html>
