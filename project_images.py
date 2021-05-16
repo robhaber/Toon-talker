@@ -84,7 +84,7 @@ class Arguments:
         self.tmp_dir = '.stylegan2-tmp'
         self.network_pkl = 'models/stylegan2-ffhq-config-f.pkl'
         self.vgg16_pkl = 'models/vgg16_zhang_perceptual.pkl'
-        self.num_steps = 150
+        self.num_steps = 500
         self.initial_learning_rate = 0.1
         self.initial_noise_factor = 0.05
         self.verbose = False
@@ -95,10 +95,11 @@ class Arguments:
         self.video_codec = 'libx264'
         self.video_bitrate = '5M'
 
-def project(src, dst):
+def project(src, dst, num_steps):
     args = Arguments()       
     args.src = src
     args.dst = dst
+    args.num_steps = num_steps
 
     print('Loading networks from "%s"...' % args.network_pkl)
     _G, _D, Gs = pretrained_networks.load_networks(args.network_pkl)

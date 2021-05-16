@@ -12,6 +12,8 @@ from numba import cuda
 app = Flask(__name__)
 run_with_ngrok(app)
 
+NUM_ITERS = 500
+
 @app.route("/")
 def home():
     return render_template('index.html')
@@ -33,6 +35,7 @@ def generate():
     return render_template('index.html')
 
 def toon_talk():
+    global NUM_ITERS
     
     # Reset Files
     if os.path.isdir('raw/'):
@@ -52,11 +55,13 @@ def toon_talk():
         pass
 
     shutil.move('static/uploads/input.png', 'raw/input.png')
-    toonify.run()
+    toonify.run(NUM_ITERS)
     shutil.move('generated/input_01-toon.jpg', 'static/uploads/input_01-toon.jpg')
     
     lipsync.run()
 
 if __name__ == '__main__':
+    global NUM_ITERS
+    NUM_ITERS = sys.argv[1]
     app.run()
     
