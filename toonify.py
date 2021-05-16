@@ -13,10 +13,10 @@ from PIL import Image
 import dnnlib.tflib as tflib
 from pathlib import Path
 
-def run():
+def run(iters):
       
     align('raw', 'aligned')
-    project('aligned', 'generated')
+    project('aligned', 'generated', iters)
 
     blended_path = "https://drive.google.com/uc?id=1H73TfV5gQ9ot7slSed_l-lim9X7pMRiU" 
     ffhq_path = "http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl"
