@@ -1,6 +1,6 @@
 # Toon Talker
 
-The preferred way to run the code is in the Colab notebook provided on the website.
+The preferred way to run the code is in the Colab notebook provided on the [project website](http://www.andrew.cmu.edu/course/16-726/projects/cliveg/project/)
 
 If you choose to run it locally, you will need a GPU, and the following:
 
