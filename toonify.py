@@ -13,8 +13,6 @@ from PIL import Image
 import dnnlib.tflib as tflib
 from pathlib import Path
 
-
-
 def run():
       
     align('raw', 'aligned')

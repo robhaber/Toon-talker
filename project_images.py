@@ -13,6 +13,7 @@ import dataset_tool
 from training import dataset
 from training import misc
 
+NUM_ITERS = 500
 
 def project_image(proj, src_file, dst_dir, tmp_dir, video=False):
 
@@ -95,11 +96,12 @@ class Arguments:
         self.video_codec = 'libx264'
         self.video_bitrate = '5M'
 
-def project(src, dst, num_steps):
+def project(src, dst):
+    global NUM_ITERS
     args = Arguments()       
     args.src = src
     args.dst = dst
-    args.num_steps = num_steps
+    args.num_steps = NUM_ITERS
 
     print('Loading networks from "%s"...' % args.network_pkl)
     _G, _D, Gs = pretrained_networks.load_networks(args.network_pkl)
