@@ -1,4 +1,4 @@
-# Cartoonify
+# Toon Talker
 
 The preferred way to run the code is in the Colab notebook provided on the website.
 
