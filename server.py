@@ -56,3 +56,7 @@ def toon_talk():
     shutil.move('generated/input_01-toon.jpg', 'static/uploads/input_01-toon.jpg')
     
     lipsync.run()
+
+if __name__ == '__main__':
+    app.run()
+    
