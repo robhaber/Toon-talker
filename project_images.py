@@ -83,7 +83,7 @@ class Arguments:
         self.src_dir = 'aligned'
         self.dst_dir = 'generated'
         self.tmp_dir = '.stylegan2-tmp'
-        self.network_pkl = 'models/stylegan2-ffhq-config-f.pkl'
+        self.network_pkl = 'http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl'
         self.vgg16_pkl = 'models/vgg16_zhang_perceptual.pkl'
         self.num_steps = 500
         self.initial_learning_rate = 0.1
