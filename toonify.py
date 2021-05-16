@@ -18,8 +18,8 @@ def run(iters):
     align('raw', 'aligned')
     project('aligned', 'generated', iters)
 
-    blended_path = "models/ffhq-cartoon-blended-64.pkl" 
-    ffhq_path = "models/stylegan2-ffhq-config-f.pkl"
+    blended_path = "https://drive.google.com/uc?id=1H73TfV5gQ9ot7slSed_l-lim9X7pMRiU" 
+    ffhq_path = "http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl"
     
     _, _, Gs_blended = pretrained_networks.load_networks(blended_path)
     _, _, Gs = pretrained_networks.load_networks(ffhq_path)
