@@ -1,4 +1,4 @@
-sfrom gtts import gTTS
+from gtts import gTTS
 import librosa
 
 
