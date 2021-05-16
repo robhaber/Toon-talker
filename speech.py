@@ -1,5 +1,4 @@
-import pyttsx3
-from gtts import gTTS
+sfrom gtts import gTTS
 import librosa
 
 
